@@ -1,5 +1,7 @@
 require "pry"
-class Insect
+require "active_record"
+
+class Insect < ActiveRecord::Base
   
   attr_accessor :name, :description, :seen_by, :location
 
