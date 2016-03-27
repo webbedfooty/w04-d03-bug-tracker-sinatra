@@ -5,3 +5,5 @@ gem "pry"
 gem "minitest-rg"
 gem "rake"
 
+gem "pg"
+gem "activerecord"
