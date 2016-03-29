@@ -3,5 +3,6 @@ require "active_record"
 require "pry"
 require "yaml"
 require_relative "lib/insect.rb"
+require_relative "lib/researcher.rb"
 
 binding.pry
