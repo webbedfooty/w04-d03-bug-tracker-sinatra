@@ -17,4 +17,9 @@ class Researcher < ActiveRecord::Base
   def insects
     Insect.where(researcher_id: id)
   end
+
+  def papers
+    Paper.where(researcher_id: id)
+  end
+
 end
