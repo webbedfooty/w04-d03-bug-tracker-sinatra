@@ -1,5 +1,5 @@
 host: 'localhost'
 adapter: 'postgresql'
-database: 'bug-tracker'
+database: 'bug-tracker-d03'
 encoding: 'utf8'
 pool: 5
