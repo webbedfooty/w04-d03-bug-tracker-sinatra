@@ -9,11 +9,6 @@ class Insect < ActiveRecord::Base
   validates :description, presence: true
   validates :location, presence: true
 
-  def researcher
-    Researcher.find_by_id(researcher_id)
-  end
-
-  def papers
-    Paper.where(insect_id: id)
-  end
+  belongs_to :researcher
+  has_many :papers
 end
