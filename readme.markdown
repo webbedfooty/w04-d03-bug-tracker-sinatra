@@ -3,26 +3,15 @@
 We're exploring a new island, and we want to keep track of all the weird and
 interesting insects we find.
 
-Here's what we've got in terms of attributes for our insects:
+Here are our models:
 
-+ *name* (string)
-+ *seen_by* (string)
-+ *location* (string)
-+ *description* (string)
++ Researchers - These are the grad students who find insects
++ Insects - These are the insects themselves
++ Papers - A researcher may write many papers, each about an insect
 
-Thus, we can make a new bug object like so:
+## Setup Instructions
 
-```ruby
-i = Insect.new( name: "Furry Mantis",
-                seen_by: "Andrew",
-                location: "In a scary cave",
-                description: "Furry and sort of dangerous looking, about 7 inches long. Winged"
-              )
-```
-
-The problem, though, is that if we want our logger program to keep working, we
-need to keep it up and running at all times. We don't have a good way of saving
-our insects so we don't have to either re-enter them each time (tedious) or keep
-our computer running at all times (inconvenient).
-
-Thus, we need our information to *persist* in a database of some sort.
+1. Clone the repository
+2. `rake db:create`
+3. `rake db:migrate`
+4. Run `main.rb`
