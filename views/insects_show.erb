@@ -1,0 +1,9 @@
+<% if @insect %>
+  <h1><%= @insect.name %></h1>
+
+  <p><em>Description:</em> <%= @insect.description %></p>
+<% else %>
+  <p>No insect of that ID exists</p>
+<% end %>
+
+<p><a href="/insects">Back to All Insects</a></p>

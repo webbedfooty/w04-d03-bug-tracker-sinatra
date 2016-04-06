@@ -1,0 +1,13 @@
+<% if @insect.errors.any? %>
+  <% @insect.errors.full_messages.each do |m| %>
+    <p>Error: <%= m %></p>
+  <% end %>
+<% end %>
+
+<h1>New Insect</h1>
+
+<form action="/insects" method="post">
+  Name:<input type="text" name="name"></br>
+  Description:<input type="text", name="description"></br>
+  <input type="submit" value="New Bug!">
+</form>

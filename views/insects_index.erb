@@ -1,0 +1,9 @@
+<h1>Insects Index</h1>
+
+<ol>
+  <% @insects.each do |insect| %>
+    <li><a href="/insects/<%= insect.id %>"><%= insect.name %></a></li>
+  <% end %>
+</ol>
+
+<p><a href="/insects/new">New Insect</a></p>

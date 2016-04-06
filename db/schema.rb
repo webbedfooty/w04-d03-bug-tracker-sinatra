@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 10) do
+ActiveRecord::Schema.define(version: 11) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 10) do
   create_table "insects", force: :cascade do |t|
     t.string  "name"
     t.string  "description"
-    t.string  "location"
     t.integer "researcher_id"
   end
 
