@@ -1,5 +1,6 @@
-host: 'localhost'
-adapter: 'postgresql'
-database: 'bug-tracker-d03'
-encoding: 'utf8'
-pool: 5
+development:
+  host: 'localhost'
+  adapter: 'postgresql'
+  database: 'bug-tracker-sinatra-d03'
+  encoding: 'utf8'
+  pool: 5
