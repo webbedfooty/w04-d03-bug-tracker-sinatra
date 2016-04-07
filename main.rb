@@ -74,3 +74,34 @@ get '/locations/:id' do
   @location = Location.find_by_id(params['id']) # nil or Location object
   erb :locations_show
 end
+#### RESEARCHER
+
+# Index - Researcher
+get '/researchers' do
+  @researchers = Researcher.all
+  erb :researchers_index
+end
+
+# New - Researcher
+get '/researchers/new' do
+  @researcher = Researcher.new
+  erb :researchers_new
+end
+
+# Create - Researcher
+post '/researchers' do
+
+  @researcher = Researcher.new(params)
+
+  if @researcher.save
+    redirect to('/researchers')
+  else
+    erb :researchers_new
+  end
+end
+
+# Show - Location
+get '/researchers/:id' do
+  @researcher = Researcher.find_by_id(params['id']) # nil or Location object
+  erb :researchers_show
+end
