@@ -4,3 +4,5 @@ development:
   database: 'bug-tracker-sinatra-d03'
   encoding: 'utf8'
   pool: 5
+  username: patrick
+  password: patrick

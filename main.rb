@@ -43,3 +43,34 @@ get '/insects/:id' do
   erb :insects_show
 end
 
+#### LOCATION
+
+# Index - Location
+get '/locations' do
+  @locations = Location.all
+  erb :locations_index
+end
+
+# New - Location
+get '/locations/new' do
+  @location = Location.new
+  erb :locations_new
+end
+
+# Create - Location
+post '/locations' do
+
+  @location = Location.new(params)
+
+  if @location.save
+    redirect to('/locations')
+  else
+    erb :locations_new
+  end
+end
+
+# Show - Location
+get '/locations/:id' do
+  @location = Location.find_by_id(params['id']) # nil or Location object
+  erb :locations_show
+end
